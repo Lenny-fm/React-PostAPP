@@ -21,7 +21,7 @@ Download the [back-end base](https://github.com/Lenny-fm/React-PostAPP/blob/main
 
 ## Build the project
 
-Add `front/` and `back/` directories and place them at the root of your repo.
+Unzip the files and add `front/` and `back/` directories and place them at the root of your repo.
 
 You need to open two terminals in order to launch two local servers: one for `back/` and one for `front/`.
 
