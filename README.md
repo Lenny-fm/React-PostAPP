@@ -5,7 +5,7 @@ This workshop will guide you through the process of building a full-stack applic
 ## Prerequisites
 
 - Node.js and MongoDB installed on your computer.
-If you don't have any of this installed, please follow the installations steps detailed [here]()
+If you don't have any of this installed, please follow the installations steps detailed [here](https://github.com/Lenny-fm/React-PostAPP/blob/main/installations.md)
 
 ## Workshop Steps
 
