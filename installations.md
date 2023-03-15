@@ -13,11 +13,11 @@ First, create a new github repository and clone it into your computer.
 
 Secondly, make sure you have node.js installed. If not you can install it [here](https://nodejs.org/en/download/package-manager/#centos-fedora-and-red-hat-enterprise-linux).
 
-After it is installed you can download the [front-end base](https://github.com/Lenny-fm/React-PostAPP/tree/main/front)
+After it is installed you can download the [front-end base](https://github.com/Lenny-fm/React-PostAPP/blob/main/front.zip)
 
 ## Back-end
 
-Download the [back-end base](https://github.com/Lenny-fm/React-PostAPP/tree/main/back)
+Download the [back-end base](https://github.com/Lenny-fm/React-PostAPP/blob/main/back.zip)
 
 ## Build the project
 
