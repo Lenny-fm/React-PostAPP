@@ -1,49 +1,42 @@
-# Back-end
+# Back-end and Implementation
 
-Before continuing, make sure you've done all the [installations](https://github.com/TristanB12/postApp_workshop/blob/master/Installations.md) (at least the back-end ones)
+Before proceeding with the back-end development, make sure you have completed all the necessary installations. You can check the [installations](./installations.md) file in the GitHub repository to ensure you have all the required software installed.
 
 ## Step 01 - Call sign up endpoint
 
-The first thing you need to understand is how to make a request from front-end to get the informations you want. The back has already an endpoint to sign up an user.
+To communicate with the back-end, you need to understand how to make a request from the front-end. The back-end already has an endpoint to sign up a user. In this step, you will learn how to use the [Axios](https://www.digitalocean.com/community/tutorials/react-axios-react) module to make a request.
 
-To make request, you can use the [axios](https://github.com/imcvampire/vue-axios) module.
-
-Open the `front/src/components/Register.js` file and implement the `signup` method:
-  - use axios module with a **post** method (**post** is used to send datas to back whereas **get** is used to only get datas)
-  - the URL you must call is http://localhost:8080/auth/signup
-  - send all the inputs in the body of the request
-  - if needed use F12 in the web app to debug
+Navigate to the `front/src/components/Register.js` file and implement the `signup` method by following these steps:
+  - Use axios module with a **post** method (**post** is used to send datas to back whereas **get** is used to only get datas)
+  - The URL you must call is `http://localhost:8080/auth/signup`
+  - Send all the inputs in the body of the request
+  - Use F12 in the web app to debug if necessary.
  
 ## Step 02 - Login endpoint
 
-Now that you've learned how to make a request, you will learn how to create a server with APIs and databases.
+In this step, you will learn how to create a server with APIs and databases. We will use Mongoose to communicate with the database and Express to build the server's APIs. You can refer to this [course](https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb) to understand how it works.
 
-We'll use mongoose to communicate with our database and Express to build the server's APIs. You can check [this](https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb) great course understand how it works.
-
-Go into the `back/routes/auth.js` file and create a new **post** endpoint:
+Navigate to the `back/routes/auth.js` file and create a new **post** by following these steps::
   - it should match `/login`
-  - it receives two parameters: username and password
-  - it check if the password matchs with the user's one
-  - it send back the user if the password is good else it send a error message
+  - it receives two parameters: `username` and `password`
+  - it check if the `password` matchs with the user's one
+  - it send back the `user` if the password is good else it send a error message
 
 Use the **User** model which is already created (it is defined in `back/models/User.js`).
-You can inspire you from [this](https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6466533-verifiez-les-informations-didentification-dun-utilisateur#/id/r-6466510) part of the course. Look how the **findOne** method is used.
+You can refer to [this](https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6466533-verifiez-les-informations-didentification-dun-utilisateur#/id/r-6466510) part of the course to understand how the **findOne** method is used.
 
 ## Step 03 - Create post endpoint
 
-In this step you will learn how to create a new model like the User one.
+In this step you will learn how to user the **Post** model.
 
-Create a new file called **Post.js** in `back/models/`.
-Look how the User model is defined to create the Post model.
+This model contains the following elements:
+  - `title`: the title of the post
+  - `description`: the content of the post
 
-It should contains the following elements:
-    - `title`: the title of the post
-    - `description`: the content of the post
-
-Once done, create a new file called **post.js** in `back/routes/` and create a new **post** endpoint:
-  - it should match `/add`
-  - it receives three parameters: username, title and content
-  - it add a new Post initialized with the parameters
+Now that you understand this model you can create a new file in `back/routes` called `post.js` and create a new **post** by following these steps:
+  - Create a new **post** endpoint that matches `/add`
+  - The endpoint should receive three parameters: `username`, `title` and `content`
+  - Add a new post in the database with the parameters.
 
 Don't forget to require the post file in `back/routes/index.js` and add the following line in `back/app.js`:
 
@@ -58,7 +51,7 @@ Look at the [save](https://openclassrooms.com/fr/courses/6390246-passez-au-full-
 
 Now you start to understand how to build your server. For this last step use all what you've learned in this workshop.
 
-You will need to create a **get** endpoint wich must match `/post/`.
+You will need to create a **get** endpoint which must match `/post/`.
 
 It just return all the posts of the current user.
 
