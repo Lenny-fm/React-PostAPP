@@ -6,6 +6,7 @@ This workshop will guide you through the process of building a full-stack applic
 
 - Node.js and MongoDB installed on your computer.
 If you don't have any of this installed, please follow the installations steps detailed [here](https://github.com/Lenny-fm/React-PostAPP/blob/main/installations.md)
+- Basic knowledge of HTML/CSS and JavaScript
 
 ## Workshop Steps
 
