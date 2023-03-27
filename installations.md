@@ -28,7 +28,7 @@ You need to open two terminals in order to launch two local servers: one for `ba
  - In `back/` run `npm install`
  - In `front/` run `npm install` and `npm start`
 
-Create a free account on [MongoDB](https://www.mongodb.com/cloud/atlas/signup) and then create a *cluster* with **AWS** and only the free options, if you have any question about this part you can send me a message on Teams -> Lenny FRANCOIS-MARIE.
+Create a free account on [MongoDB](https://www.mongodb.com/cloud/atlas/signup), create a project and then a *cluster* with **AWS** and only the free options, if you have any question about this part you can send me a message on Teams -> Lenny FRANCOIS-MARIE.
 
 While the cluster is starting, click on *Database Access* and create a new user (don't forget the username and the password). Make sure to have the **read and write to any database** option and click on *add user*.
 
